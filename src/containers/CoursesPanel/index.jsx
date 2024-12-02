@@ -108,7 +108,7 @@ const { authenticatedUser } = React.useContext(AppContext);
   }
 
   useEffect(() => {
-    fetch(`https://restapi.palmdev.mathesis.org/fetch-data?uid=${ authenticatedUser.userId }`, {method: 'GET'},
+    fetch(`http://local.edly.io:5001/fetch-data?uid=${ authenticatedUser.userId }`, {method: 'GET'},
           {headers: { 'Content-Type': 'multipart/form-data', 'Access-Control-Allow-Origin': '*'}})
         .then(response => response.json())
         .then(data => setData(data))
@@ -157,7 +157,7 @@ const { authenticatedUser } = React.useContext(AppContext);
 
 
                 <div style={{float: 'right', position: 'relative'}} >
-                    <form action="https://pay.mathesis.org/el/payments/pay/" method="POST">
+                    <form action="http://local.edly.io:8080/el/payments/pay/" method="POST">
                         <input type="hidden" name="uname" value={ authenticatedUser.username } />
                         <input type="hidden" name="email" value={ authenticatedUser.email } />
                         <input type="hidden" name="uid" value={ authenticatedUser.userId } />
