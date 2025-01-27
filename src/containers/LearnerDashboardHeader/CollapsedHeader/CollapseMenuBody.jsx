@@ -32,9 +32,9 @@ export const CollapseMenuBody = ({ isOpen }) => {
       <Button as="a" href="/" variant="inverse-primary">
         {formatMessage(messages.course)}
       </Button>
-      <Button as="a" href={urls.programsUrl()} variant="inverse-primary">
+      {/* <Button as="a" href={urls.programsUrl()} variant="inverse-primary">
         {formatMessage(messages.program)}
-      </Button>
+      </Button> */}
       <Button
         as="a"
         href={urls.baseAppUrl(courseSearchUrl)}
