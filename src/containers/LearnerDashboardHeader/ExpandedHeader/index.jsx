@@ -38,14 +38,14 @@ export const ExpandedHeader = () => {
         >
           {formatMessage(messages.course)}
         </Button>
-        <Button
+        {/* <Button
           as="a"
           href={urls.programsUrl()}
           variant="inverse-primary"
           className="p-4"
         >
           {formatMessage(messages.program)}
-        </Button>
+        </Button> */}
         <Button
           as="a"
           href={urls.baseAppUrl(courseSearchUrl)}
