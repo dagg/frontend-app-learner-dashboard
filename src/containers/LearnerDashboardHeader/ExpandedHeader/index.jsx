@@ -56,14 +56,14 @@ export const ExpandedHeader = () => {
           {formatMessage(messages.discoverNew)}
         </Button>
         <span className="flex-grow-1" />
-        {/* <Button
+         <Button
           as="a"
           href={getConfig().SUPPORT_URL}
           variant="inverse-primary"
           className="p-4"
         >
           {formatMessage(messages.help)}
-        </Button> */}
+        </Button> 
       </div>
 
       <AuthenticatedUserDropdown />
