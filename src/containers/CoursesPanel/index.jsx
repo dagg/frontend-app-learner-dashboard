@@ -137,16 +137,18 @@ const { authenticatedUser } = React.useContext(AppContext);
 
 {/* Starting with unpaid courses list */}
 
-{!data || Object.keys(data).length <= 0 ?
-      <p>Loading...</p> :
+  {!data || Object.keys(data).length <= 0 ?
+        <p>Loading...</p> :
       <div style={{width: "100%", clear: "both"}}>
-
+         {api_data_results.length>0 ? (
         <div style={mystyles.ctexttitle}>
             <header className="wrapper-header-courses">
                 <span className="header-courses">Μαθήματα με ηθική δέσμευση που εκκρεμεί η έκδοση βεβαίωσης:</span>
             </header>
         </div>
-
+        ):(
+          <div></div>
+        )}
         <ul>
           {api_data_results.map(items =>
           <li key="{items.id}" style={mystyles.courselist}>
@@ -154,7 +156,6 @@ const { authenticatedUser } = React.useContext(AppContext);
             <div style={mystyles.ctitle}>
               <a href={items.course_url} target='_blank' rel='noopener noreferrer'>
                 <img style={mystyles.courseimg} src={items.image_url} width="100px" /> {items.name} </a>
-
 
                 <div style={{float: 'right', position: 'relative'}} >
                     <form action="https://pay.mathesis.org/el/payments/pay/" method="POST">
@@ -171,12 +172,15 @@ const { authenticatedUser } = React.useContext(AppContext);
             </li>
           )
             }
+            {api_data_results.length>0 ? (
             <div className="header-courses" style={mystyles.ctextmessage}> Σας ενημερώνουμε ότι όσοι δεν έχουν εκπληρώσει την ηθική δέσμευση που έχουν αναλάβει σε περισσότερα από 2 μαθήματα
               των οποίων οι προθεσμίες πληρωμής έχουν λήξει, στα νέα μαθήματα που τυχόν παρακολουθήσουν δεν θα έχουν πρόσβαση στην τελική τους εξέταση,
               υπό τον όρο βέβαια ότι η μη τήρηση της δέσμευσής τους συνεχίζεται. </div>
-
-          < hr />
-        </ul>
+        ):(
+          <div></div>
+        )}
+        < hr />
+          </ul>
       </div>
       }
 
