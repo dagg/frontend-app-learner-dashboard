@@ -9,13 +9,13 @@ exports[`DashboardLayout collapsed sidebar not showing snapshot 1`] = `
     <Col
       className="course-list-column"
       lg={
-        Object {
+        {
           "offset": 0,
           "span": 12,
         }
       }
       xl={
-        Object {
+        {
           "offset": 0,
           "span": 12,
         }
@@ -26,26 +26,19 @@ exports[`DashboardLayout collapsed sidebar not showing snapshot 1`] = `
     <Col
       className="sidebar-column"
       lg={
-        Object {
+        {
           "offset": 0,
           "span": 12,
         }
       }
       xl={
-        Object {
+        {
           "offset": 0,
           "span": 4,
         }
       }
     >
-      <mockConstructor
-        setSidebarShowing={[MockFunction hooks.setSidebarShowing]}
-      />
-    </Col>
-  </Row>
-  <Row>
-    <Col>
-      <WidgetFooter />
+      <WidgetSidebarSlot />
     </Col>
   </Row>
 </Container>
@@ -60,13 +53,13 @@ exports[`DashboardLayout collapsed sidebar showing snapshot 1`] = `
     <Col
       className="course-list-column"
       lg={
-        Object {
+        {
           "offset": 0,
           "span": 12,
         }
       }
       xl={
-        Object {
+        {
           "offset": 0,
           "span": 8,
         }
@@ -77,26 +70,19 @@ exports[`DashboardLayout collapsed sidebar showing snapshot 1`] = `
     <Col
       className="sidebar-column"
       lg={
-        Object {
+        {
           "offset": 0,
           "span": 12,
         }
       }
       xl={
-        Object {
+        {
           "offset": 0,
           "span": 4,
         }
       }
     >
-      <mockConstructor
-        setSidebarShowing={[MockFunction hooks.setSidebarShowing]}
-      />
-    </Col>
-  </Row>
-  <Row>
-    <Col>
-      <WidgetFooter />
+      <WidgetSidebarSlot />
     </Col>
   </Row>
 </Container>
@@ -111,13 +97,13 @@ exports[`DashboardLayout not collapsed sidebar not showing snapshot 1`] = `
     <Col
       className="course-list-column"
       lg={
-        Object {
+        {
           "offset": 0,
           "span": 12,
         }
       }
       xl={
-        Object {
+        {
           "offset": 0,
           "span": 12,
         }
@@ -128,13 +114,13 @@ exports[`DashboardLayout not collapsed sidebar not showing snapshot 1`] = `
     <Col
       className="sidebar-column"
       lg={
-        Object {
+        {
           "offset": 0,
           "span": 12,
         }
       }
       xl={
-        Object {
+        {
           "offset": 0,
           "span": 4,
         }
@@ -145,14 +131,7 @@ exports[`DashboardLayout not collapsed sidebar not showing snapshot 1`] = `
       >
          
       </h2>
-      <mockConstructor
-        setSidebarShowing={[MockFunction hooks.setSidebarShowing]}
-      />
-    </Col>
-  </Row>
-  <Row>
-    <Col>
-      <WidgetFooter />
+      <WidgetSidebarSlot />
     </Col>
   </Row>
 </Container>
@@ -167,13 +146,13 @@ exports[`DashboardLayout not collapsed sidebar showing snapshot 1`] = `
     <Col
       className="course-list-column"
       lg={
-        Object {
+        {
           "offset": 0,
           "span": 12,
         }
       }
       xl={
-        Object {
+        {
           "offset": 0,
           "span": 8,
         }
@@ -184,13 +163,13 @@ exports[`DashboardLayout not collapsed sidebar showing snapshot 1`] = `
     <Col
       className="sidebar-column"
       lg={
-        Object {
+        {
           "offset": 0,
           "span": 12,
         }
       }
       xl={
-        Object {
+        {
           "offset": 0,
           "span": 4,
         }
@@ -201,14 +180,7 @@ exports[`DashboardLayout not collapsed sidebar showing snapshot 1`] = `
       >
          
       </h2>
-      <mockConstructor
-        setSidebarShowing={[MockFunction hooks.setSidebarShowing]}
-      />
-    </Col>
-  </Row>
-  <Row>
-    <Col>
-      <WidgetFooter />
+      <WidgetSidebarSlot />
     </Col>
   </Row>
 </Container>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import { PluginSlot } from '@openedx/frontend-plugin-framework';
 import { useIntl } from '@edx/frontend-platform/i18n';
 
 import { AppContext } from '@edx/frontend-platform/react';
@@ -9,9 +8,8 @@ import { reduxHooks } from 'hooks';
 import {
   CourseFilterControls,
 } from 'containers/CourseFilterControls';
-import NoCoursesView from './NoCoursesView';
-
-import CourseList from './CourseList';
+import CourseListSlot from 'plugin-slots/CourseListSlot';
+import NoCoursesViewSlot from 'plugin-slots/NoCoursesViewSlot';
 
 import { useCourseListData } from './hooks';
 
@@ -194,19 +192,7 @@ const { authenticatedUser } = React.useContext(AppContext);
           <CourseFilterControls {...courseListData.filterOptions} />
         </div>
       </div>
-      {hasCourses ? (
-        <PluginSlot
-          id="course_list"
-        >
-          <CourseList {...courseListData} />
-        </PluginSlot>
-      ) : (
-        <PluginSlot
-          id="no_courses_view"
-        >
-          <NoCoursesView />
-        </PluginSlot>
-      )}
+      {hasCourses ? <CourseListSlot courseListData={courseListData} /> : <NoCoursesViewSlot />}
     </div>
   );
 };

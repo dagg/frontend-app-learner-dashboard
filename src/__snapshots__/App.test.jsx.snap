@@ -28,7 +28,6 @@ exports[`App router component component initialize failure snapshot 1`] = `
       </main>
     </AppWrapper>
     <FooterSlot />
-    <ZendeskFab />
   </div>
 </Fragment>
 `;
@@ -51,13 +50,10 @@ exports[`App router component component no network failure snapshot 1`] = `
     <AppWrapper>
       <LearnerDashboardHeader />
       <main>
-        <ExperimentProvider>
-          <Dashboard />
-        </ExperimentProvider>
+        <Dashboard />
       </main>
     </AppWrapper>
     <FooterSlot />
-    <ZendeskFab />
   </div>
 </Fragment>
 `;
@@ -75,21 +71,15 @@ exports[`App router component component no network failure with optimizely proje
       rel="shortcut icon"
       type="image/x-icon"
     />
-    <script
-      src="undefined/optimizelyjs/fakeId.js"
-    />
   </HelmetWrapper>
   <div>
     <AppWrapper>
       <LearnerDashboardHeader />
       <main>
-        <ExperimentProvider>
-          <Dashboard />
-        </ExperimentProvider>
+        <Dashboard />
       </main>
     </AppWrapper>
     <FooterSlot />
-    <ZendeskFab />
   </div>
 </Fragment>
 `;
@@ -107,21 +97,15 @@ exports[`App router component component no network failure with optimizely url s
       rel="shortcut icon"
       type="image/x-icon"
     />
-    <script
-      src="fake.url"
-    />
   </HelmetWrapper>
   <div>
     <AppWrapper>
       <LearnerDashboardHeader />
       <main>
-        <ExperimentProvider>
-          <Dashboard />
-        </ExperimentProvider>
+        <Dashboard />
       </main>
     </AppWrapper>
     <FooterSlot />
-    <ZendeskFab />
   </div>
 </Fragment>
 `;
@@ -154,7 +138,6 @@ exports[`App router component component refresh failure snapshot 1`] = `
       </main>
     </AppWrapper>
     <FooterSlot />
-    <ZendeskFab />
   </div>
 </Fragment>
 `;
