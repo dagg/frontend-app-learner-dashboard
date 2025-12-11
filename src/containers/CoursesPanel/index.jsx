@@ -158,12 +158,13 @@ const { authenticatedUser } = React.useContext(AppContext);
                 <img style={mystyles.courseimg} src={items.image_url} width="100px" /> {items.name} </a>
 
                 <div style={{float: 'right', position: 'relative'}} >
-                    <form action="https://pay.mathesis.org/el/payments/pay/" method="POST">
+                    <form action="http://139.91.205.38:5005/el/cart/" method="POST">
                         <input type="hidden" name="uname" value={ authenticatedUser.username } />
                         <input type="hidden" name="email" value={ authenticatedUser.email } />
                         <input type="hidden" name="uid" value={ authenticatedUser.userId } />
                         <input type="hidden" name="cid" value={items.id} />
                         <input type="hidden" name="payhash" value={ data.payhash } />
+                        <input type="hidden" name="token" value={ data.token } />
                         <input type="submit" value="Έκδοση Βεβαίωσης" className="mybtn" style={mystyles.mybtn} />
                     </form>
                 </div>
