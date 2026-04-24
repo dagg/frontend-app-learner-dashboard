@@ -97,12 +97,9 @@ export const CoursesPanel = () => {
   const hasCourses = reduxHooks.useHasCourses();
   const courseListData = useCourseListData();
 
-
-
   // Starting with unpaid courses list //
 
-
-const { authenticatedUser } = React.useContext(AppContext);
+  const { authenticatedUser } = React.useContext(AppContext);
 
   console.log(">>>"+JSON.stringify({ authenticatedUser })+"<<<");
 
@@ -196,9 +193,6 @@ const { authenticatedUser } = React.useContext(AppContext);
   }
 
 // Ending with unpaid courses list //
-
-
-
 
   return (
     
