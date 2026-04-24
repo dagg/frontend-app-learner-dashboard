@@ -23,6 +23,10 @@ public/samples/
 # Local package dependencies
 module.config.js
 
+webpack.dev-tutor.config.js
+package-lock.json
+
+
 ### transifex ###
 src/i18n/transifex_input.json
 temp
