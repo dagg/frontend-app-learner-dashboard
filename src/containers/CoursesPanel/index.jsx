@@ -27,8 +27,7 @@ const NewsletterBanner = () => {
     if (!user) { return; }
 
     const { userId, email } = user;
-    // const url = `http://127.0.0.1:5003/el/newsletter/newsletter_choice/${userId}/${email}/`;
-    const url = `http://192.168.1.12:5003/el/newsletter/newsletter_choice/9/${email}/`;
+    const url = `https://pay.mathesis.org/el/newsletter/newsletter_choice/${userId}/${email}/`;
 
     fetch(url)
       .then((response) => response.json())
@@ -57,9 +56,9 @@ const NewsletterBanner = () => {
               <div className="copy">
                 <p className="activation-message">
                   Όπως προβλέπεται στους ανανεωμένους{' '}
-                  <a href="http://local.openedx.io:8000/honor">Όρους Χρήσης</a>
+                  <a href="https://palmdev.mathesis.org/honor">Όρους Χρήσης</a>
                   {' '}και στην{' '}
-                  <a href="http://local.openedx.io:8000/gdpr">
+                  <a href="https://palmdev.mathesis.org/gdpr">
                     Πολιτική Προστασίας Δεδομένων Προσωπικού Χαρακτήρα
                   </a>
                   , η εγγραφή σας περιλαμβάνει τη συγκατάθεσή σας να λαμβάνετε
@@ -70,8 +69,7 @@ const NewsletterBanner = () => {
                   μπορείτε να την δώσετε πατώντας το παρακάτω "κουμπί":
                   <br /><br />
                   <center>
-                    {/* <a href={`http://127.0.0.1:5003/el/newsletter/newsletter_registration/${userId}/${email}/`} style={{ boxSizing: 'border-box', letterSpacing: 0, border: '1px solid #0d4e6c', borderRadius: '3px', padding: '8px 20px', textAlign: 'center', backgroundColor: 'white' }}>Ναι, θέλω να ενημερώνομαι.</a> */}
-                    <a href={`http://192.168.1.12:5003/el/newsletter/newsletter_registration/9/${email}/`} style={{ boxSizing: 'border-box', letterSpacing: 0, border: '1px solid #0d4e6c', borderRadius: '3px', padding: '8px 20px', textAlign: 'center', backgroundColor: 'white' }}>Ναι, θέλω να ενημερώνομαι.</a>
+                    <a href={`https://pay.mathesis.org/el/newsletter/newsletter_registration/${userId}/${email}/`} style={{ boxSizing: 'border-box', letterSpacing: 0, border: '1px solid #0d4e6c', borderRadius: '3px', padding: '8px 20px', textAlign: 'center', backgroundColor: 'white' }}>Ναι, θέλω να ενημερώνομαι.</a>
                   </center>
                 </p>
               </div>
