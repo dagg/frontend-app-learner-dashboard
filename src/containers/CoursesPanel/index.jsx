@@ -56,9 +56,9 @@ const NewsletterBanner = () => {
               <div className="copy">
                 <p className="activation-message">
                   Όπως προβλέπεται στους ανανεωμένους{' '}
-                  <a href="https://palmdev.mathesis.org/honor">Όρους Χρήσης</a>
+                  <a href="https://mathesis.cup.gr/honor">Όρους Χρήσης</a>
                   {' '}και στην{' '}
-                  <a href="https://palmdev.mathesis.org/gdpr">
+                  <a href="https://mathesis.cup.gr/gdpr">
                     Πολιτική Προστασίας Δεδομένων Προσωπικού Χαρακτήρα
                   </a>
                   , η εγγραφή σας περιλαμβάνει τη συγκατάθεσή σας να λαμβάνετε
@@ -171,7 +171,7 @@ export const CoursesPanel = () => {
   }
 
   useEffect(() => {
-    fetch(`https://restapi.palmdev.mathesis.org/fetch-data?uid=${ authenticatedUser.userId }`, {method: 'GET'},
+    fetch(`https://restapi.mathesis.cup.gr/fetch-data?uid=${ authenticatedUser.userId }`, {method: 'GET'},
           {headers: { 'Content-Type': 'multipart/form-data', 'Access-Control-Allow-Origin': '*'}})
         .then(response => response.json())
         .then(data => setData(data))
@@ -182,9 +182,9 @@ export const CoursesPanel = () => {
   if (Object.keys(data).length == 0){
     // console.log("NO DATA YET...")
   } else {
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-    console.log(api_data_results);
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+//    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+//    console.log(api_data_results);
+//    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     for (let i = 0; i < data.count; i++) {
       api_data_results.push(data.results[i]);
     }
@@ -223,7 +223,7 @@ export const CoursesPanel = () => {
                 <img style={mystyles.courseimg} src={items.image_url} width="100px" /> {items.name} </a>
 
                 <div style={{float: 'right', position: 'relative'}} >
-                    <form action="http://139.91.205.38:5005/el/cart/" method="POST">
+                    <form action="https://pay.mathesis.org/el/payments/pay/" method="POST">
                         <input type="hidden" name="uname" value={ authenticatedUser.username } />
                         <input type="hidden" name="email" value={ authenticatedUser.email } />
                         <input type="hidden" name="uid" value={ authenticatedUser.userId } />
